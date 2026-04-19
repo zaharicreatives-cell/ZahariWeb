@@ -1,0 +1,319 @@
+<!--
+  Zahari Creatives - Homepage (single-file HTML)
+  Instructions: Replace placeholder images (picsum) with your own photos.
+  Replace logo.svg with your real logo. Update contact details as needed.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zahari Creatives — Empowering Young Minds Through Arts & Tech</title>
+  <meta name="description" content="Zahari Creatives: Music, media, STEM & creative programmes for children. Partner with us or enroll your child today.">
+  <!-- Tailwind via CDN for quick styling (replace with a build when moving to production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small, tasteful artistic flourish */
+    .accent-gradient {
+      background: linear-gradient(90deg, #0ea5a4 0%, #2563eb 100%);
+    }
+    .hero-blob {
+      position: absolute; inset: -20% -10% auto auto; width: 520px; height: 520px; filter: blur(48px); opacity: .15; transform: rotate(15deg);
+      background: radial-gradient(circle at 30% 30%, #f472b6, transparent 20%), radial-gradient(circle at 70% 70%, #60a5fa, transparent 20%);
+      border-radius: 40% 60% 30% 70% / 50% 30% 70% 50%;
+      z-index: 0;
+    }
+    .nav-backdrop { backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-gray-50">
+  <!-- Navigation -->
+  <header class="fixed w-full z-40">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between nav-backdrop">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="/white logo.jpeg" alt="Zahari Creatives" class="h-10 w-10 object-contain">
+        <span class="font-semibold text-lg">Zahari Creatives</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 text-sm">
+        <li><a href="#about" class="hover:text-sky-600">About</a></li>
+        <li><a href="#programs" class="hover:text-sky-600">Programs</a></li>
+        <li><a href="#gallery" class="hover:text-sky-600">Gallery</a></li>
+        <li><a href="#involved" class="hover:text-sky-600">Get Involved</a></li>
+        <li><a href="#contact" class="hover:text-sky-600">Contact</a></li>
+      </ul>
+      <div class="hidden md:flex gap-3">
+        <a href="#involved" class="px-4 py-2 text-sm rounded-md font-medium border border-sky-600">Partner with us</a>
+        <a href="#contact" class="px-4 py-2 text-sm rounded-md font-medium accent-gradient text-white shadow">Join / Enroll</a>
+      </div>
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="Open menu" class="p-2 rounded-md ring-1 ring-gray-200 bg-white">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile nav panel (simple) -->
+    <div id="mobileNav" class="hidden md:hidden bg-white shadow-sm">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#involved">Get Involved</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="pt-24">
+    <section class="relative overflow-hidden">
+      <div class="hero-blob"></div>
+      <div class="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div class="relative z-10">
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Education that builds talent: Radiance meets Creativity</h1>
+          <p class="mt-4 text-gray-700 max-w-xl">At Zahari Creatives we teach Creative and Performing Arts, Innovation and Life Skills to children and youth — partnering with schools and organisations to deliver practical, professional and fun programmes.</p>
+
+          <div class="mt-6 flex gap-3">
+            <a href="#involved" class="px-5 py-3 rounded-md font-medium accent-gradient text-white shadow-lg">Partner with us</a>
+            <a href="#contact" class="px-5 py-3 rounded-md font-medium border border-gray-300 bg-white">Enroll a student</a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="p-3 bg-white rounded-lg shadow-sm">
+              <h6 class="text-xs uppercase text-gray-500">Programs</h6>
+              <p class="text-sm font-semibold">Creative arts • Performing arts • Life skills • Innovation skills</p>
+            </div>
+            <div class="p-3 bg-white rounded-lg shadow-sm">
+              <h6 class="text-xs uppercase text-gray-500">Years</h6>
+              <p class="text-sm font-semibold">Established 2025</p>
+            </div>
+            <div class="p-3 bg-white rounded-lg shadow-sm">
+              <h6 class="text-xs uppercase text-gray-500">Reach</h6>
+              <p class="text-sm font-semibold">Schools, Private Organiations & Individual classes</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <div class="rounded-2xl overflow-hidden shadow-2xl">
+            <img src="Class room.jpeg" alt="Children learning instruments" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-14">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-2xl font-bold">About Zahari Creatives</h2>
+          <p class="mt-4 text-gray-700">Zahari Creatives empowers children and youth through structured creative learning — combining music education, media skills, and beginner STEM to build well-rounded learners. We partner with schools and organisations to run after-school clubs, workshops, and in-school programmes that are practical, curriculum-aligned and hugely engaging.</p>
+
+          <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <li class="flex gap-3 items-start">
+              <div class="w-2.5 h-2.5 rounded-full bg-sky-500 mt-2"></div>
+              <div>
+                <div class="font-semibold">Experienced instructors</div>
+                <div class="text-sm text-gray-600">Practitioners with teaching & industry experience.</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <div class="w-2.5 h-2.5 rounded-full bg-sky-500 mt-2"></div>
+              <div>
+                <div class="font-semibold">Practical outcomes</div>
+                <div class="text-sm text-gray-600">Performances, portfolios & certificates.</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <div class="w-2.5 h-2.5 rounded-full bg-sky-500 mt-2"></div>
+              <div>
+                <div class="font-semibold">School-friendly</div>
+                <div class="text-sm text-gray-600">Flexible delivery: clubs, term courses, workshops.</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <div class="w-2.5 h-2.5 rounded-full bg-sky-500 mt-2"></div>
+              <div>
+                <div class="font-semibold">Safe & inclusive</div>
+                <div class="text-sm text-gray-600">Child-centered safeguarding and pastoral care.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="Studio.jpeg" alt="Workshop scene" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="bg-white py-14">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-2xl font-bold">Our Programs</h3>
+        <p class="mt-2 text-gray-600">Tailored programmes for schools, Private organisations and Individuals.</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h4 class="font-semibold">Creative Arts</h4>
+            <p class="mt-2 text-sm text-gray-600">Music/Music instruments, Painting, Pottery, Beading, Crocheting, Photography/Videography</p>
+          </article>
+
+          <article class="p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h4 class="font-semibold">Innovation Skills</h4>
+            <p class="mt-2 text-sm text-gray-600">Coding, Robotics, Chess, AI,</p>
+          </article>
+
+          <article class="p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h4 class="font-semibold">Performing Arts</h4>
+            <p class="mt-2 text-sm text-gray-600">Dance/Ballet, Etiquette, Life Skills, Health and Fitness, Modeling, Taekwondo</p>
+          </article>
+
+          <article class="p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h4 class="font-semibold">Practical Skills</h4>
+            <p class="mt-2 text-sm text-gray-600">Cookery and Bakery, Swimming, Kiddy Tennis, Skating</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="max-w-6xl mx-auto px-6 py-14">
+      <h3 class="text-2xl font-bold">Gallery — Our Work</h3>
+      <p class="mt-2 text-gray-600">A selection of photos from classes, workshops and performances.</p>
+
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+        <img src="Catering.jpeg" alt="gallery" class="rounded-lg object-cover w-full h-32 sm:h-40">
+        <img src="Robotics.jpeg" alt="gallery" class="rounded-lg object-cover w-full h-32 sm:h-40">
+        <img src="Trumpet.jpeg" alt="gallery" class="rounded-lg object-cover w-full h-32 sm:h-40">
+        <img src="Chess.jpeg" alt="gallery" class="rounded-lg object-cover w-full h-32 sm:h-40">
+        <img src="Piano.jpeg" alt="gallery" class="rounded-lg object-cover w-full h-32 sm:h-40">
+        <img src="GTR.jpeg" alt="gallery" class="rounded-lg object-cover w-full h-32 sm:h-40">
+      </div>
+
+      <p class="mt-4 text-sm text-gray-500"></p>
+    </section>
+
+    <!-- Get Involved / Partnerships -->
+    <section id="involved" class="bg-sky-50 py-14">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl font-bold">Partner with Zahari Creatives</h3>
+          <p class="mt-3 text-gray-700">We work with schools, community organisations and donors to deliver tailored programmes — from ongoing club support to one-off workshops and school-wide projects.</p>
+
+          <ul class="mt-4 space-y-3 text-gray-700">
+            <li>• School partnerships (in-school clubs & term programmes)</li>
+            <li>• Workshops & outreach events</li>
+            <li>• Equipment donations & sponsorship</li>
+          </ul>
+
+          <div class="mt-6">
+            <a href="#contact" class="px-5 py-3 rounded-md font-medium accent-gradient text-white shadow">Get in touch about partnering</a>
+          </div>
+        </div>
+        <div>
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="WT (2).jpeg" alt="Partnership" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-14">
+      <h3 class="text-2xl font-bold">Contact</h3>
+      <p class="mt-2 text-gray-600">Reach out to discuss partnerships, programmes or enrolling students.</p>
+
+      <div class="mt-6 grid md:grid-cols-2 gap-8">
+        <div class="space-y-4">
+          <div class="p-6 rounded-xl bg-white shadow">
+            <h4 class="font-semibold">Zahari Creatives</h4>
+            <p class="mt-2 text-sm text-gray-600">Peninah, Dancan</p>
+            <p class="text-sm text-gray-600">Phone: <a href="tel:+254745097676" class="text-sky-600">+254 745 097 676</a></p>
+            <p class="text-sm text-gray-600">Email: <a href="mailto:zaharicreatives@gmail.com" class="text-sky-600">zaharicreatives@gmail.com</a></p>
+          </div>
+
+          <div class="p-6 rounded-xl bg-white shadow">
+            <h4 class="font-semibold">Class Locations</h4>
+            <p class="mt-2 text-sm text-gray-600">Nairobi, Kenya — we visit partner schools and run community classes. Exact locations by arrangement.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-white shadow">
+          <h4 class="font-semibold">Message</h4>
+          <form action="https://formspree.io/f/xqagalze" method="POST" class="space-y-4">
+  <!-- Hidden input to disable Captcha and redirect after submission -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+
+  <div>
+    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+    <input type="text" id="name" name="name" required
+      class="mt-1 w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500 outline-none">
+  </div>
+
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+    <input type="email" id="email" name="email" required
+      class="mt-1 w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500 outline-none">
+  </div>
+
+  <div>
+    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+    <textarea id="message" name="message" rows="4" required
+      class="mt-1 w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-sky-500 outline-none"></textarea>
+  </div>
+
+  <button type="submit"
+    class="w-full px-5 py-3 font-medium rounded-md accent-gradient text-white shadow hover:opacity-90">
+    Send Message
+  </button>
+</form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-200 py-8">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+        <div>
+          <a href="#home" class="flex items-center gap-3 text-white">
+            <img src="white logo.jpeg" alt="Zahari Creatives" class="h-8 w-8 object-contain">
+            <span class="font-semibold">Zahari Creatives</span>
+          </a>
+          <p class="mt-3 text-sm text-gray-400">Creative education for children & youth — music, media and STEM.</p>
+        </div>
+
+        <div>
+          <h5 class="font-semibold">Quick links</h5>
+          <ul class="mt-3 space-y-2 text-sm text-gray-400">
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#involved">Get Involved</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="font-semibold">Contact</h5>
+          <p class="mt-3 text-sm text-gray-400">zaharicreatives@gmail.com<br>+254 745 097 676</p>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center text-xs text-gray-500">&copy; <span id="year"></span> Zahari Creatives. All rights reserved.</div>
+    </footer>
+  </main>
+
+  <script>
+    // Small helpers: mobile menu and dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if(menuBtn){
+      menuBtn.addEventListener('click', ()=> mobileNav.classList.toggle('hidden'));
+    }
+  </script>
+</body>
+</html>
