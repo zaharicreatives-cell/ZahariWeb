@@ -1,0 +1,20 @@
+/* Image Hover Zoom Effect */
+.image-box {
+    overflow: hidden;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.zoom-image {
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+    display: block;
+}
+
+.zoom-image:hover {
+    transform: scale(1.30);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+}
