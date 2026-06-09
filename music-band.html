@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <title>Music Band — Zahari Creatives</title>
+  <meta name="description" content="Zahari Creatives Music Band: Live entertainment for weddings, corporate events & special occasions — spanning Afro, gospel, jazz, R&B, soul and more.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+    :root {
+      --teal:  #0ea5a4;
+      --blue:  #2563eb;
+      --dark:  #0f172a;
+      --light: #f8fafc;
+    }
+
+    body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); }
+
+    .accent-gradient { background: linear-gradient(90deg, var(--teal) 0%, var(--blue) 100%); }
+
+    .display { font-family: 'Playfair Display', serif; }
+
+    /* Nav */
+    nav { backdrop-filter: blur(6px); background: rgba(15,23,42,0.92); }
+
+    /* Hero */
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #0ea5a4 100%);
+      min-height: 92vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 40%, rgba(14,165,164,0.18) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(37,99,235,0.15) 0%, transparent 50%);
+    }
+    .music-note {
+      position: absolute;
+      font-size: 6rem;
+      opacity: 0.06;
+      color: white;
+      user-select: none;
+      animation: float 8s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50%       { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    /* Sections */
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, var(--teal), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Genre pills */
+    .genre-pill {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid rgba(14,165,164,0.35);
+      color: var(--teal);
+      background: rgba(14,165,164,0.06);
+      transition: all 0.2s;
+    }
+    .genre-pill:hover { background: rgba(14,165,164,0.15); }
+
+    /* Photo placeholders */
+    .photo-placeholder {
+      background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 0.8rem;
+      font-weight: 500;
+      gap: 0.5rem;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    .photo-placeholder svg { opacity: 0.4; }
+
+    /* Service cards */
+    .service-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .service-card:hover { box-shadow: 0 8px 32px rgba(14,165,164,0.12); transform: translateY(-2px); }
+
+    /* Divider */
+    .grad-divider { height: 3px; background: linear-gradient(90deg, var(--teal), var(--blue)); border-radius: 2px; }
+
+    /* CTA strip */
+    .cta-strip { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────────────── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 py-3 px-6 flex items-center justify-between">
+    <a href="/index.html" class="flex items-center gap-2">
+      <img src="/white logo.jpeg" alt="Zahari Creatives" class="h-9 w-auto rounded">
+      <span class="text-white font-semibold text-sm hidden sm:inline">Zahari Creatives</span>
+    </a>
+    <div class="flex items-center gap-4 text-sm text-slate-300">
+      <a href="/index.html" class="hover:text-white transition">Zahari Home</a>
+      <a href="#services" class="hover:text-white transition">Band Services</a>
+      <a href="#gallery" class="hover:text-white transition">Band Gallery</a>
+      <a href="#contact" class="accent-gradient text-white px-4 py-1.5 rounded-full font-medium hover:opacity-90 transition">Book Now</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section class="hero-bg flex items-center px-6 pt-24 pb-16">
+    <!-- floating musical notes atmosphere -->
+    <span class="music-note" style="top:10%;left:5%;animation-delay:0s;">♪</span>
+    <span class="music-note" style="top:60%;left:2%;animation-delay:2s;font-size:4rem;">♫</span>
+    <span class="music-note" style="top:20%;right:8%;animation-delay:1s;">♩</span>
+    <span class="music-note" style="top:70%;right:5%;animation-delay:3s;font-size:5rem;">♬</span>
+    <span class="music-note" style="top:40%;left:48%;animation-delay:1.5s;font-size:3rem;">♭</span>
+
+    <div class="relative z-10 max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text -->
+      <div>
+        <p class="section-eyebrow mb-4">Live Entertainment</p>
+        <h1 class="display text-white text-5xl md:text-6xl font-bold leading-tight mb-6">
+          Music that moves <br><span style="background:linear-gradient(90deg,#0ea5a4,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">every moment</span>
+        </h1>
+        <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-md">
+          Zahari Creatives Music Band delivers unforgettable live performances for weddings, corporate events, and special occasions — blending Afro, gospel, jazz, R&B, soul and more.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="accent-gradient text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">Book the Band</a>
+          <a href="#services" class="border border-slate-500 text-slate-200 px-6 py-3 rounded-full font-semibold hover:border-teal-400 hover:text-white transition">Our Services</a>
+        </div>
+      </div>
+
+      <!-- Hero photo -->
+      <div class="photo-placeholder h-80 md:h-96 w-full" style="border-radius:1.25rem;">
+        <!-- Replace the lines below with: <img src="/Image/YOUR_BAND_PHOTO.jpeg" alt="Zahari Creatives Music Band" class="w-full h-full object-cover rounded-2xl"> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span>band-hero-photo.jpeg</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ──────────────────────────────────────────── -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="photo-placeholder h-72 w-full">
+        <!-- Replace with: <img src="/Image/YOUR_ABOUT_PHOTO.jpeg" alt="Band performing" class="w-full h-full object-cover rounded-xl"> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span>band-about-photo.jpeg</span>
+      </div>
+      <div>
+        <p class="section-eyebrow mb-3">About the Band</p>
+        <h2 class="display text-3xl font-bold text-slate-900 mb-5">Dynamic. Versatile. Unforgettable.</h2>
+        <div class="grad-divider w-16 mb-6"></div>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Zahari Creatives Music Band is a dynamic and versatile live entertainment band dedicated to delivering unforgettable musical experiences. Combining exceptional talent, creativity, and professionalism, the band offers a rich repertoire spanning contemporary hits, African classics, gospel, jazz, R&B, soul, and timeless favorites.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          With a passion for excellence and a commitment to creating memorable moments, the band brings energy, elegance, and authenticity to every performance — whether soothing background music, vibrant dance sets, or fully customised musical experiences.
+        </p>
+        <p class="text-slate-700 font-medium italic border-l-4 pl-4" style="border-color:#0ea5a4;">
+          "Music is more than entertainment — it is an experience that inspires, celebrates, and brings people together."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GENRES ─────────────────────────────────────────── -->
+  <section class="bg-slate-50 py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="section-eyebrow mb-3">Repertoire</p>
+      <h2 class="display text-3xl font-bold text-slate-900 mb-3">A sound for every occasion</h2>
+      <p class="text-slate-500 mb-10">From intimate ceremonies to high-energy celebrations — the band adapts to your vision.</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="genre-pill">Contemporary Hits</span>
+        <span class="genre-pill">African Classics</span>
+        <span class="genre-pill">Gospel</span>
+        <span class="genre-pill">Jazz</span>
+        <span class="genre-pill">R&amp;B</span>
+        <span class="genre-pill">Soul</span>
+        <span class="genre-pill">Afrobeats</span>
+        <span class="genre-pill">Reggae</span>
+        <span class="genre-pill">Timeless Favorites</span>
+        <span class="genre-pill">Background Lounge</span>
+        <span class="genre-pill">Dance Sets</span>
+        <span class="genre-pill">Custom Requests</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ───────────────────────────────────────── -->
+  <section id="services" class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-14">
+      <p class="section-eyebrow mb-3">What We Offer</p>
+      <h2 class="display text-3xl font-bold text-slate-900">Perfect for every event</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="service-card p-6 bg-white">
+        <div class="w-11 h-11 rounded-xl accent-gradient flex items-center justify-center mb-4">
+          <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 class="font-bold text-lg text-slate-900 mb-2">Weddings</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">From the ceremony processional to the last dance, we craft the perfect musical journey for your special day.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card p-6 bg-white">
+        <div class="w-11 h-11 rounded-xl accent-gradient flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        </div>
+        <h3 class="font-bold text-lg text-slate-900 mb-2">Corporate Events</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Elevate your company dinners, product launches, and team celebrations with sophisticated live music.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card p-6 bg-white">
+        <div class="w-11 h-11 rounded-xl accent-gradient flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3 class="font-bold text-lg text-slate-900 mb-2">Private Celebrations</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Birthdays, anniversaries, graduations — we bring the energy and elegance your milestone deserves.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card p-6 bg-white">
+        <div class="w-11 h-11 rounded-xl accent-gradient flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        </div>
+        <h3 class="font-bold text-lg text-slate-900 mb-2">Concerts & Shows</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Full-scale concert performances with powerful stage presence and audience connection that keeps crowds engaged.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card p-6 bg-white">
+        <div class="w-11 h-11 rounded-xl accent-gradient flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h3 class="font-bold text-lg text-slate-900 mb-2">Background & Lounge</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Soothing, ambient sets for cocktail hours, restaurant nights, and gallery openings where atmosphere matters.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card p-6 bg-white">
+        <div class="w-11 h-11 rounded-xl accent-gradient flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <h3 class="font-bold text-lg text-slate-900 mb-2">Custom Experiences</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Tailored setlists, themed performances, and bespoke musical arrangements designed around your brief.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── GALLERY ────────────────────────────────────────── -->
+  <section id="gallery" class="bg-slate-50 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="section-eyebrow mb-3">Gallery</p>
+        <h2 class="display text-3xl font-bold text-slate-900">The band in action</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <!-- Replace each photo-placeholder div with an <img> tag pointing to your image -->
+
+        <div class="photo-placeholder h-56">
+          <!-- <img src="/Image/band-photo-1.jpeg" alt="Band performing" class="w-full h-full object-cover rounded-xl"> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>band-photo-1.jpeg</span>
+        </div>
+
+        <div class="photo-placeholder h-56">
+          <!-- <img src="/Image/band-photo-2.jpeg" alt="Band at wedding" class="w-full h-full object-cover rounded-xl"> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>band-photo-2.jpeg</span>
+        </div>
+
+        <div class="photo-placeholder h-56">
+          <!-- <img src="/Image/band-photo-3.jpeg" alt="Corporate event" class="w-full h-full object-cover rounded-xl"> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>band-photo-3.jpeg</span>
+        </div>
+
+        <div class="photo-placeholder h-56">
+          <!-- <img src="/Image/band-photo-4.jpeg" alt="Concert performance" class="w-full h-full object-cover rounded-xl"> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>band-photo-4.jpeg</span>
+        </div>
+
+        <div class="photo-placeholder h-56">
+          <!-- <img src="/Image/band-photo-5.jpeg" alt="Private celebration" class="w-full h-full object-cover rounded-xl"> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>band-photo-5.jpeg</span>
+        </div>
+
+        <div class="photo-placeholder h-56">
+          <!-- <img src="/Image/band-photo-6.jpeg" alt="Band members" class="w-full h-full object-cover rounded-xl"> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>band-photo-6.jpeg</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- ── CTA ────────────────────────────────────────────── -->
+<section id="contact" class="cta-strip py-20 px-6">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="section-eyebrow mb-4">Book the Band</p>
+    <h2 class="display text-4xl font-bold text-white mb-4">Ready to make your event unforgettable?</h2>
+    <p class="text-slate-300 text-lg mb-10">Get in touch to discuss your event, check availability, or request a custom setlist.</p>
+
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-left max-w-xl mx-auto">
+      <!-- ✅ Real form pointing to Formspree -->
+      <form action="https://formspree.io/f/xjgdokkw" method="POST" class="space-y-4">
+
+        <!-- Hidden field so replies go to the sender -->
+        <input type="hidden" name="_replyto" value="">
+
+        <div>
+          <label class="text-slate-400 text-xs font-medium uppercase tracking-wider block mb-1">Your Name</label>
+          <input type="text" name="name" placeholder="e.g. Amina Wanjiku" required
+            class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-teal-400 transition text-sm">
+        </div>
+        <div>
+          <label class="text-slate-400 text-xs font-medium uppercase tracking-wider block mb-1">Email or Phone</label>
+          <input type="text" name="contact" placeholder="email@example.com or +254 7XX XXX XXX" required
+            class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-teal-400 transition text-sm">
+        </div>
+        <div>
+          <label class="text-slate-400 text-xs font-medium uppercase tracking-wider block mb-1">Event Type & Date</label>
+          <input type="text" name="event" placeholder="e.g. Wedding — 14 Feb 2026"
+            class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-teal-400 transition text-sm">
+        </div>
+        <div>
+          <label class="text-slate-400 text-xs font-medium uppercase tracking-wider block mb-1">Message</label>
+          <textarea rows="3" name="message" placeholder="Tell us about your event..."
+            class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-teal-400 transition text-sm resize-none"></textarea>
+        </div>
+
+        <!-- ✅ Submit button instead of <a> link -->
+        <button type="submit"
+          class="accent-gradient w-full text-center text-white font-semibold py-3 rounded-xl hover:opacity-90 transition cursor-pointer">
+          Send Enquiry
+        </button>
+      </form>
+    </div>
+
+    <div class="mt-8 flex flex-wrap justify-center gap-6 text-slate-400 text-sm">
+      <span>📞 <a href="tel:+254745097676" class="hover:text-teal-400 transition">+254 745 097 676</a></span>
+      <span>✉️ <a href="mailto:zaharicreatives@gmail.com" class="hover:text-teal-400 transition">zaharicreatives@gmail.com</a></span>
+      <span>📍 Nairobi, Kenya</span>
+    </div>
+  </div>
+</section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="bg-slate-900 py-8 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <a href="/index.html" class="flex items-center gap-2">
+        <img src="/white logo.jpeg" alt="Zahari Creatives" class="h-8 w-auto rounded">
+        <span class="text-slate-300 text-sm font-medium">Zahari Creatives</span>
+      </a>
+      <p class="text-slate-500 text-xs">© Zahari Creatives. All rights reserved.</p>
+      <div class="flex gap-4 text-sm text-slate-400">
+        <a href="/index.html" class="hover:text-white transition">Home</a>
+        <a href="/creative-arts.html" class="hover:text-white transition">Creative Arts</a>
+        <a href="/performing-arts.html" class="hover:text-white transition">Performing Arts</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
